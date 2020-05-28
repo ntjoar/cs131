@@ -1,0 +1,16 @@
+CS 131: Homework 1
+Nathan Tjoar
+005081232
+
+For this project, I was more comfortable with using C and C++ in the first place, making recursional thinking a little more difficult and time consuming. Additionally, withh all the new coding methods, it took me a little bit of time to really read and understand the different commands and prompts fully.
+For this project, I took most of my approaches from a more head-tail standpoint. The idea behind this was to sort of create an environment so I could do recursion, but it would still be similar to ther process of iterating through an array. The difficulty ere is the infinite recursion loops that could happen. 
+The project spec was rathher unclear at first until I began reading the test cases and dissecting what each one meant and what I was supposed to do from there. 
+Below, I have linked sources I used, though I did not use any of their code. Rather, I used these sources as a reference sheet while I was coding.
+
+Sources Used:
+https://caml.inria.fr/pub/docs/manual-ocaml/libref/Pervasives.html
+https://caml.inria.fr/pub/docs/manual-ocaml/libref/List.html
+http://rigaux.org/language-study/syntax-across-languages-per-language/OCaml.html
+https://caml.inria.fr/pub/docs/fpcl/fpcl-05.pdf
+https://ocaml.org/learn/tutorials/if_statements_loops_and_recursion.html
+https://ocaml.org/learn/tutorials/labels.html

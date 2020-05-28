@@ -1,0 +1,50 @@
+CS 131: Homework 2
+
+make_matcher
+For make_matcher, my solution did not implement the use of make_parser, but it 
+did use the hints at the bottom of the spec to construct a DFS approach. This 
+DFS approach was mainly done with the ability to backtrack should the algorithm
+not find a prefix match. This was done until completion and relies on the use 
+of two helper functions. The first helper function explored the current 
+nonterminal alternative list. The second helper function explored the rule list
+of a nonterminal symbol to match with the fragment.
+The Helper functions were called:
+matcher -> first function
+current_rule_iterator -> Second function
+
+make_parser
+make_parser relies on make_matcher, but does not call it directly. Instead, 
+make_parser calls two of its own modified helper functions which only 
+differed really in its own custom acceptor. The acceptor parsed the rule list 
+of a given nonterminal symbol in similarly to its predecessor to recursively 
+produce a derivation. This derivation then was used to construct a tree via a 
+DFS algorithm. The algorithm's idea was to essentially get all of the rules
+and proceed to construct a tree using those rules. At each nonterminal node,
+it would try to construct as many connections downwards as it could until 
+arriving at a leaf node. This constructed quick subtrees as it would trace
+back to remaining nonterminals and then proceed to carry out construction until
+finish.
+The Helper functions were called:
+matcher_parser -> first function
+current_rule_iterator_parser -> Second function
+
+Issues
+While testing my code, I found these possibilities: 
+Infinite recursion - with certain grammar subsets, a certain grammar rule calls
+itself as part ofthe alt list. This causes issue in that the process loops 
+infintely and bounces continuously between the two sets. Error codes would 
+appear (Shown below)
+"Stack overflow during evaluation (looping  recursion?)."
+Not all cases covered - in one of the lines when generating the file, I was 
+unable to cover all topics according to OCaml, in which I could not find a 
+solid answer to solve such issue. My program, therefore, when compiling will 
+give a warning for said line.
+Large grammar cases - as is the problem with much of OCaml, larger grammar 
+cases may cause issues in the processing time of OCaml. It will turn out 
+slower and parse taking much time because of the time complexity of recursive 
+calls.
+Space Complexity - My program is rather large in size and runs practically the 
+same helper function in two different runs. It is mostly modified to fit better 
+in each set, but definitely could have been improved should I have written a 
+single helper function that would essentially run both. However, I was unable 
+to see said possibilities. 
